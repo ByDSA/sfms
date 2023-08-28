@@ -1,6 +1,6 @@
-# Patrón Máquina de estados Estática (Static FMS)
+# Máquina de estados con validación de estática (Static FMS)
 
-Máquina de estados (FMS) con validación estática de las acciones y transiciones de los estados y autoinvalidación de las acciones y métodos de estados anteriores.
+Máquina de estados (FMS) con validación estática de las acciones y transiciones que pueden o no hacer los estados y autoinvalidación de las referencias a estados anteriores.
 
 ## Uso
 ```ts
@@ -89,7 +89,7 @@ deleteSFMS(sfms);
 ```
 
 ## Custom error
-Se peude personalizar el comportamiento cuando se intentan ejecutar acciones de estados invalidados.
+Se puede personalizar el comportamiento cuando se intentan ejecutar acciones de estados invalidados.
 
 ```ts
 let sfms: StateMachine = newSFMS(new State1(), {
