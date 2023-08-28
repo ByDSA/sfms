@@ -1,0 +1,4 @@
+No hay comprobaciones que garanticen que el estado de ejecución y el estado de tipado sean el mismo. Cualquier posibilidad de discrepancia entre ambos estados invalidaría el tipado estático y obligaría hacer los mismos tests que se harían sin tipado estático. La posibilidad de fallo humano está en todos los casos donde en el código:
+- Se cambia el estado de ejecución: en la inicialización y en las funciones de transición.
+- Se comprueba el estado de ejecución: en las funciones de acción:
+  - Olvido de implementar una acción que el tipado estático dice que se puede hacer. Usar switch con neverCase en vez de if-else ayuda a que el desarrollador se dé cuenta, pero no evita este error.
